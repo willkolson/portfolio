@@ -1,0 +1,10 @@
+# Netlify build settings (these override anything set in the Netlify UI).
+# The Astro site lives in /web; the Sanity Studio in /studio is deployed separately.
+
+[build]
+  base = "web"
+  command = "npm run build"
+  publish = "dist"   # relative to base, i.e. web/dist
+
+[build.environment]
+  NODE_VERSION = "26"   # match local Node so builds behave the same
